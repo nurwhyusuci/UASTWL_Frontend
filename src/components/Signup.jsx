@@ -18,7 +18,7 @@ export const Signup = () => {
   async function handleClick(e) {
     e.preventDefault();
     try {
-      const post = await axios.post("http://localhost:4000/", data);
+      const post = await axios.post("https://uastwl-backend-two.vercel.app/", data);
       console.log("Success");
       goThere("/"); // Make sure goThere function is properly defined
     } catch (error) {

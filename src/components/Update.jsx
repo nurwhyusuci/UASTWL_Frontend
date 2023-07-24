@@ -21,7 +21,7 @@ export const Update = () => {
   const [val, setVal] = useState({});
 
   async function getData() {
-    const data = await axios.get(`http://localhost:4000/${id}`);
+    const data = await axios.get(`https://uastwl-backend-two.vercel.app/${id}`);
     setVal(data.data);
     console.log(data.data);
   }
@@ -32,7 +32,7 @@ export const Update = () => {
 
   async function handleClick(e) {
     e.preventDefault();
-    const post = await axios.put(`http://localhost:4000/${id}`, data);
+    const post = await axios.put(`https://uastwl-backend-two.vercel.app/${id}`, data);
     if (!post) {
       console.log("Error");
     }
